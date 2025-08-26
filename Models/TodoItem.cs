@@ -4,6 +4,7 @@ namespace todo_app.Models
 {
     public class TodoItem
     {
+        // Primary key
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Title zorunludur.")]

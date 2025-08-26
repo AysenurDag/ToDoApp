@@ -14,12 +14,10 @@ namespace todo_app.Controllers
         private readonly AppDbContext _context;
         public TodosController(AppDbContext context) => _context = context;
 
-        // GET api/todos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodos()
             => await _context.Todos.AsNoTracking().ToListAsync();
 
-        // GET api/todos/5
         [HttpGet("{id:int}")]
         public async Task<ActionResult<TodoItem>> GetTodo(int id)
         {
@@ -27,8 +25,7 @@ namespace todo_app.Controllers
             return todo is null ? NotFound() : todo;
         }
 
-        // POST api/todos
-        // Neden CreatedAtAction? -> REST'te kaynak oluşturunca 201 + Location header döneriz.
+        
         [HttpPost]
         public async Task<ActionResult<TodoItem>> CreateTodo([FromBody] TodoItem todo)
         {
@@ -40,8 +37,7 @@ namespace todo_app.Controllers
         }
 
 
-        // PUT api/todos/5
-        // Neden NoContent? -> Başarılı güncellemenin gövdesiz 204 döndürmesi yaygın pratik.
+       
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateTodo(int id, TodoItem todo)
         {
@@ -51,7 +47,6 @@ namespace todo_app.Controllers
             return NoContent();
         }
 
-        // DELETE api/todos/5
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteTodo(int id)
         {
