@@ -166,3 +166,4 @@ C:\Users\aysen\Desktop\todo-app\todo-app\obj\Debug\net9.0\refint\todo-app.dll
 C:\Users\aysen\Desktop\todo-app\todo-app\obj\Debug\net9.0\todo-app.pdb
 C:\Users\aysen\Desktop\todo-app\todo-app\obj\Debug\net9.0\todo-app.genruntimeconfig.cache
 C:\Users\aysen\Desktop\todo-app\todo-app\obj\Debug\net9.0\ref\todo-app.dll
+C:\Users\aysen\Desktop\todo-app\todo-app\obj\Debug\net9.0\todo-app.sourcelink.json
